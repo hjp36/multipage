@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fuego Page 3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Latios</h1>
+    <p>This is a legendary pokemon</p>
+    <div class="button-group">
+        <button onclick="window.location.href='fuego4.html'">Next</button>
+        <button onclick="window.location.href='fuego2.html'">Back</button>
+    </div>
+        <img id="poke-img" src="latios.webp" alt="Fuego Image" style="width:500px; height:auto;">
+        <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+        <script>
+            document.getElementById('poke-img').addEventListener('click', function(e) {
+                confetti({
+                    particleCount: 120,
+                    spread: 80,
+                    origin: { x: (e.clientX / window.innerWidth), y: (e.clientY / window.innerHeight) }
+                });
+            });
+        </script>
+</body>
+</html>

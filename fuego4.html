@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fuego Page 4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Shiny event whurple</h1>
+    <p>This is a special pokemon that can only be caught during special events </p>
+    <div class="button-group">
+        <button onclick="window.location.href='fuego1.html'">Next</button>
+        <button onclick="window.location.href='fuego3.html'">Back</button>
+    </div>
+        <img id="poke-img" src="whurple.webp" alt="Fuego Image" style="width:500px; height:auto;">
+        <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+        <script>
+            document.getElementById('poke-img').addEventListener('click', function(e) {
+                confetti({
+                    particleCount: 120,
+                    spread: 80,
+                    origin: { x: (e.clientX / window.innerWidth), y: (e.clientY / window.innerHeight) }
+                });
+            });
+        </script>
+</body>
+</html>
